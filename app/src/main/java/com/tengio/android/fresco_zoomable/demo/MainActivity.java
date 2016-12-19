@@ -9,6 +9,9 @@ import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.backends.pipeline.PipelineDraweeController;
 import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
+import com.tengio.android.fresco_zoomable.DefaultZoomableController;
+import com.tengio.android.fresco_zoomable.DoubleTapGestureListener;
+import com.tengio.android.fresco_zoomable.ZoomableController;
 import com.tengio.android.fresco_zoomable.ZoomableDraweeView;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ZoomableDraweeView view = (ZoomableDraweeView) findViewById(R.id.example);
+        ZoomableController zoomableController = view.getZoomableController();
+        if (zoomableController instanceof DefaultZoomableController) {
+            ((DefaultZoomableController) zoomableController).setMaxScaleFactor(4);
+        }
         view.getHierarchy().setActualImageScaleType(ScalingUtils.ScaleType.CENTER_INSIDE);
         Uri uri = new Uri.Builder()
                 .scheme(UriUtil.LOCAL_RESOURCE_SCHEME)
@@ -33,5 +40,8 @@ public class MainActivity extends AppCompatActivity {
                         .setOldController(view.getController())
                         .build();
         view.setController(controller);
+
+
+        view.setTapListener(new DoubleTapGestureListener(view));
     }
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SimpleZoomableDraweeView">
+        <attr name="zoomableMaxScale" format="float" />
+        <attr name="zoomableMinScale" format="float" />
+    </declare-styleable>
+</resources>

@@ -87,25 +87,25 @@ public class ZoomableDraweeView extends DraweeView<GenericDraweeHierarchy>
   public ZoomableDraweeView(Context context, GenericDraweeHierarchy hierarchy) {
     super(context);
     setHierarchy(hierarchy);
-    init();
+    init(null);
   }
 
   public ZoomableDraweeView(Context context) {
     super(context);
     inflateHierarchy(context, null);
-    init();
+    init(null);
   }
 
   public ZoomableDraweeView(Context context, AttributeSet attrs) {
     super(context, attrs);
     inflateHierarchy(context, attrs);
-    init();
+    init(attrs);
   }
 
   public ZoomableDraweeView(Context context, AttributeSet attrs, int defStyle) {
     super(context, attrs, defStyle);
     inflateHierarchy(context, attrs);
-    init();
+    init(attrs);
   }
 
   protected void inflateHierarchy(Context context, @Nullable AttributeSet attrs) {
@@ -117,7 +117,7 @@ public class ZoomableDraweeView extends DraweeView<GenericDraweeHierarchy>
     setHierarchy(builder.build());
   }
 
-  private void init() {
+  protected void init(AttributeSet attributeSet) {
     mZoomableController = createZoomableController();
     mZoomableController.setListener(mZoomableListener);
     mTapGestureDetector = new GestureDetector(getContext(), mTapListenerWrapper);
