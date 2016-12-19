@@ -12,8 +12,18 @@ Version
 [ ![Download](https://api.bintray.com/packages/tengioltd/maven/android-fresco-zoomable/images/download.svg) ](https://bintray.com/tengioltd/maven/android-fresco-zoomable/_latestVersion)
 
 
-HOW TO
-======
+Examples
+========
+
+SimpleZoomableDraweeView
+------------------------
+
+SimpleZoomableDraweeView expose two attributes to change max and min zoomable scale.
+
+```
+app:zoomableMaxScale="8"
+app:zoomableMinScale="1"
+```
 
 Dependencies
 ------------
