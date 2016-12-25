@@ -26,6 +26,7 @@ import com.facebook.common.logging.FLog;
 /**
  * Zoomable controller that calculates transformation based on touch events.
  */
+@SuppressWarnings("all")
 public class DefaultZoomableController
     implements ZoomableController, TransformGestureDetector.Listener {
 

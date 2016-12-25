@@ -25,8 +25,9 @@ import com.facebook.common.logging.FLog;
 
 /**
  * ZoomableController that adds animation capabilities to DefaultZoomableController using standard
- * Android animation classes
+ * Android animation classes.
  */
+@SuppressWarnings("all")
 public class AnimatedZoomableController extends AbstractAnimatedZoomableController {
 
   private static final Class<?> TAG = AnimatedZoomableController.class;

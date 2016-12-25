@@ -21,6 +21,7 @@ import android.view.MotionEvent;
  * one will be started (if there are still pressed pointers left). It is guaranteed that the number
  * of pointers within the single gesture will remain the same during the whole gesture.
  */
+@SuppressWarnings("all")
 public class MultiPointerGestureDetector {
 
   /** The listener for receiving notifications when gestures occur. */

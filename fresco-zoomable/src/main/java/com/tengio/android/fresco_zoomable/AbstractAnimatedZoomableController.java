@@ -22,6 +22,7 @@ import com.facebook.common.logging.FLog;
  * Abstract class for ZoomableController that adds animation capabilities to
  * DefaultZoomableController.
  */
+@SuppressWarnings("all")
 public abstract class AbstractAnimatedZoomableController extends DefaultZoomableController {
 
   private boolean mIsAnimating;

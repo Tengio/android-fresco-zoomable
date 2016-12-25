@@ -21,6 +21,7 @@ import android.view.MotionEvent;
  * The instance of this detector is passed to the listeners, so it can be queried
  * for pivot, translation, scale or rotation.
  */
+@SuppressWarnings("all")
 public class TransformGestureDetector implements MultiPointerGestureDetector.Listener {
 
   /** The listener for receiving notifications when gestures occur. */
